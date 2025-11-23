@@ -1,0 +1,42 @@
+# .swiftlint.yml
+
+# 1. Paths to ignore
+# It is crucial to exclude auto-generated code, Pods, or Carthage to speed up linting.
+excluded:
+  - Carthage
+  - Pods
+  - .bundle
+  - DerivedData
+  - Generated
+
+# 2. Disable standard rules that are often annoying
+disabled_rules:
+  - identifier_name
+  - trailing_comma
+
+# 3. Opt-in to rules that are OFF by default (but recommended)
+opt_in_rules:
+  - empty_count             # Prefer checking .isEmpty instead of .count == 0
+  - empty_string            # Prefer checking .isEmpty instead of string == ""
+  - fatal_error_message     # Require a message when using fatalError()
+
+# 4. Customizing specific rules
+# Relax the line length constraint (Default is 120)
+line_length:
+  warning: 120
+  ignores_function_declarations: true
+  ignores_comments: true
+
+# Allow more complex functions (Cyclomatic Complexity)
+cyclomatic_complexity:
+  warning: 15
+  error: 25
+
+# Allow longer files
+file_length:
+  warning: 500
+  error: 1200
+
+# 5. Auto-correct settings
+# Only needed if you run 'swiftlint --fix'
+custom_rules: {}

@@ -1,8 +1,8 @@
 import XCTest
 
-final class jamspaceUITestsLaunchTests: XCTestCase {
+final class JamspaceUITestsLaunchTests: XCTestCase {
 
-    override class var runsForEachTargetApplicationUIConfiguration: Bool {
+    override static var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }
 
